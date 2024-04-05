@@ -3,9 +3,9 @@ public class VersionManager {
 
     public void updateVersion(ETypeUpdate type) {
         this.version = version + switch(type) {
-            case ETypeUpdate.PATCH -> 1;
-            case ETypeUpdate.MINEUR -> 10;
-            case ETypeUpdate.MAJEUR -> 100;
+            case ETypeUpdate.PATCH -> Constants.UPDATE_PATCH_VALUE;
+            case ETypeUpdate.MINEUR -> Constants.UPDATE_MINEUR_VALUE;
+            case ETypeUpdate.MAJEUR -> Constants.UPDATE_MAJEUR_VALUE;
             default -> 0;
         };
     }
